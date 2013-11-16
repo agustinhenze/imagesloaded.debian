@@ -1,0 +1,27 @@
+Source: imagesloaded
+Section: web
+Priority: optional
+Maintainer: Agustin Henze <tin@debian.org>
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: slimit
+Standards-Version: 3.9.5
+Homepage: http://desandro.github.io/imagesloaded/
+Vcs-Git: git://anonscm.debian.org/collab-maint/imagesloaded.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/imagesloaded.git
+
+
+Package: libjs-imagesloaded
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: javascript-common
+Suggests: libjs-jquery
+Description: Detect when images have been loaded
+ Is a Javascript library that detects when the load of an image is ready.
+ Usage:
+ """
+ imagesLoaded(elem, callback)
+ // you can use `new` if you like
+ new imagesLoaded(elem, callback)
+ // elem Element, NodeList, Array, or Selector String
+ // callback Function - function triggered after all images have been loaded
+ """

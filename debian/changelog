@@ -1,0 +1,5 @@
+imagesloaded (3.0.4-1) unstable; urgency=low
+
+  * Initial release. (Closes: #722936)
+
+ -- Agustin Henze <tin@debian.org>  Sat, 16 Nov 2013 10:37:55 -0300

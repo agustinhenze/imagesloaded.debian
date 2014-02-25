@@ -1,3 +1,9 @@
+imagesloaded (3.1.4-1) unstable; urgency=medium
+
+  * New upstream release 3.1.4
+
+ -- Agustin Henze <tin@debian.org>  Tue, 25 Feb 2014 10:54:16 -0300
+
 imagesloaded (3.0.4-1) unstable; urgency=low
 
   * Initial release. (Closes: #722936)

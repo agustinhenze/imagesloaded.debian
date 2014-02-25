@@ -22,15 +22,16 @@ get-orig-source:
 	fi
 	mkdir -p ../tmp/packaged
 	wget https://github.com/Wolfy87/EventEmitter/archive/v4.2.6.tar.gz -O ../tmp/event_emitter.tar.gz
-	wget https://github.com/desandro/eventie/archive/v1.0.3.tar.gz -O ../tmp/eventie.tar.gz
+	wget https://github.com/desandro/eventie/archive/v1.0.4.tar.gz -O ../tmp/eventie.tar.gz
 	wget https://github.com/desandro/imagesloaded/archive/v$(UPSTREAM_VERSION).tar.gz \
 		-O ../tmp/imagesloaded_$(UPSTREAM_VERSION).tar.gz;
 	tar -C ../tmp -xf ../tmp/event_emitter.tar.gz
 	tar -C ../tmp -xf ../tmp/eventie.tar.gz
 	tar -C ../tmp -xf ../tmp/imagesloaded_$(UPSTREAM_VERSION).tar.gz
-	echo "/*! imagesLoaded \"PACKAGED\" v3.0.4 */" > ../tmp/packaged/imagesloaded.pkgd.js;
+	echo "/*! imagesLoaded \"PACKAGED\" v$(UPSTREAM_VERSION) */" > ../tmp/packaged/imagesloaded.pkgd.js;
 	cat ../tmp/EventEmitter-4.2.6/EventEmitter.js >> ../tmp/packaged/imagesloaded.pkgd.js;
-	cat ../tmp/eventie-1.0.3/eventie.js >> ../tmp/packaged/imagesloaded.pkgd.js;
-	cat ../tmp/imagesloaded-3.0.4/imagesloaded.js >> ../tmp/packaged/imagesloaded.pkgd.js;
-	cp ../tmp/imagesloaded-3.0.4/README.md ../tmp/packaged/
+	cat ../tmp/eventie-1.0.4/eventie.js >> ../tmp/packaged/imagesloaded.pkgd.js;
+	cat ../tmp/imagesloaded-$(UPSTREAM_VERSION)/imagesloaded.js >> ../tmp/packaged/imagesloaded.pkgd.js;
+	cp ../tmp/imagesloaded-$(UPSTREAM_VERSION)/README.md ../tmp/packaged/
 	tar -C ../tmp/packaged imagesloaded.pkgd.js README.md -c --xz -f ../imagesloaded_$(UPSTREAM_VERSION).orig.tar.xz
+	rm -rf ../tmp

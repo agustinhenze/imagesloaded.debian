@@ -1,3 +1,9 @@
+imagesloaded (3.1.8-1) unstable; urgency=medium
+
+  * Imported Upstream version 3.1.8
+
+ -- Agustin Henze <tin@debian.org>  Tue, 24 Jun 2014 08:53:45 -0300
+
 imagesloaded (3.1.5-1) unstable; urgency=medium
 
   * Imported Upstream version 3.1.5
